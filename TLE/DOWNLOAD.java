@@ -4,26 +4,28 @@ class download
 {
 	public static void main(String ar[]) throws Exception
 	{
-		Scanner st = new Scanner(System.in);
-		int N = st.nextInt();
+		DataInputStream st = new DataInputStream(System.in);
+		int N = Integer.parseInt(st.readLine());
 		int S[]=new int[N];
 		int E[]=new int[N];
 		int F[]=new int[N];
 		int a,k,b,t,i,count=0;
 		for(a=0;a<N;a++)
 		{
-			S[a]=st.nextInt();
-			E[a]=st.nextInt();
+			StringTokenizer z=new StringTokenizer(st.readLine());
+			S[a]=Integer.parseInt(z.nextToken());
+			E[a]=Integer.parseInt(z.nextToken());
 			F[a]=0;
 		}
-		int Q= st.nextInt();
+		int Q= Integer.parseInt(st.readLine());
 		int R[]=new int[Q];
 		for(a=0;a<Q;a++)
 		{
-			k= st.nextInt();
+			StringTokenizer z=new StringTokenizer(st.readLine());
+			k= Integer.parseInt(z.nextToken());
 			for(b=0;b<k;b++)
 			{
-				t= st.nextInt();
+				t= Integer.parseInt(z.nextToken());
 				for(i=0;i<N;i++)
 				{
 					if(t>=S[i] && t<=E[i] && F[i]==0)
