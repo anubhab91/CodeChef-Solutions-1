@@ -4,7 +4,8 @@ class chefston
 {
 	public static void main(String ar[]) throws Exception
 	{
-		DataInputStream st=new DataInputStream(System.in);
+		// DataInputStream st=new DataInputStream(System.in);
+		BufferedReader st= new BufferedReader(new InputStreamReader(System.in));
 		int t=Integer.parseInt(st.readLine());
 		int i,j,n,k;
 		long co,max=0;
